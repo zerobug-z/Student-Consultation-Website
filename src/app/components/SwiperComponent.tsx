@@ -44,6 +44,7 @@ const SwiperComponent = () => {
       {universities.map((u) =>
         u.isImg ? (
           <SwiperSlide key={u.alt} className="flex items-center justify-center py-4">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className="w-full h-24 object-contain" src={u.src} alt={u.alt} />
           </SwiperSlide>
         ) : (

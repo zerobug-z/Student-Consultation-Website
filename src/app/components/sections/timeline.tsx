@@ -19,7 +19,7 @@ export default function Timeline() {
       ([entry]) => entry.isIntersecting && setVisible(true),
       { threshold: 0.3 }
     );
-    ref.current && io.observe(ref.current);
+    if (ref.current) io.observe(ref.current);
     return () => io.disconnect();
   }, []);
 
